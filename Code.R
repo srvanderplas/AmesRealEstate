@@ -195,3 +195,7 @@ if (!exists("house_info.csv")) {
     select(-completeness) %>%
     write_csv("house_photos.csv", append = F)
 }
+
+system("git add house_info.csv house_photos.csv photos/*")
+system("git commit -a -m 'Automatic Update'")
+system("git push")

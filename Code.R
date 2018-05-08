@@ -1,3 +1,7 @@
+#!/usr/bin/Rscript
+
+setwd("~/Rprojects/Misc/AmesRealEstate")
+
 # Pictures
 # Description
 # Extra information (if accurate)

@@ -1,6 +1,7 @@
 #!/usr/bin/Rscript
 
-setwd("~/Rprojects/Misc/AmesRealEstate")
+library(here)
+setwd(here())
 
 # Pictures
 # Description

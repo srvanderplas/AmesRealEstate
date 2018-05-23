@@ -1,7 +1,7 @@
 #!/usr/bin/Rscript
 
 library(here)
-setwd(here())
+setwd("~/Rprojects/Misc/AmesRealEstate/")
 
 # Pictures
 # Description
@@ -159,7 +159,7 @@ house_info <- map_df(houses_fullinfo, ~magrittr::extract2(.x, 1)) %>%
   mutate_if(is.character, str_replace, pattern = " ?[[:punct:]]$", replacement = "")
 
 house_allinfo <- full_join(houses, house_info)
-rm(houses_fullinfo)
+# rm(houses_fullinfo)
 
 # Only download new photos
 new_photos <- filter(house_photos, !file.exists(filename))

@@ -114,7 +114,7 @@ get_houseinfo <- function(h_url, photo_dir = "photos") {
 
 url <- "https://www.zillow.com/homes/for_sale/fsba,fsbo_lt/house_type/ef51a5aedfX1-CR1n2kaelgv03ge_12pfr1_crid/3-_beds/21780-_lot/0_singlestory/42.370212,-93.457261,41.735966,-94.3499_rect/9_zm/1_p/0_mmm/"
 # Client option
-rD <- rsDriver(browser = "chrome")
+rD <- rsDriver(browser = "firefox")
 remDr <- rD[["client"]]
 
 # Docker option # It recognizes Docker's browser as a robot

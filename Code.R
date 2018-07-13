@@ -123,7 +123,7 @@ remDr$open()
 remDr$navigate(url)
 
 # Establish a wait for an element
-remDr$setImplicitWaitTimeout(1000)
+# remDr$setImplicitWaitTimeout(1000)
 
 pgsrc <- remDr$getPageSource() %>% magrittr::extract2(1) %>% read_html()
 articles <-  html_nodes(pgsrc, "article")

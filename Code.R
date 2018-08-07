@@ -119,11 +119,12 @@ remDr <- rD[["client"]]
 
 # Docker option # It recognizes Docker's browser as a robot
 # remDr <- remoteDriver(remoteServerAddr = "localhost", port = 4445L, browserName = "chrome")
-remDr$open()
+# remDr$open()
 remDr$navigate(url)
 
 # Establish a wait for an element
 # remDr$setImplicitWaitTimeout(1000)
+Sys.sleep(4)
 
 pgsrc <- remDr$getPageSource() %>% magrittr::extract2(1) %>% read_html()
 articles <-  html_nodes(pgsrc, "article")

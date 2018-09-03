@@ -1,6 +1,7 @@
 id,link,photo_id,class,filename,saved
 93947368,https://photos.zillowstatic.com/p_h/ISyfi086gf8fol0000000000.jpg,X1-IAc0yl66gf8fol0000000000_nbzu6,hip-photo,photos/ISyfi086gf8fol0000000000.jpg,TRUE
-93947368,"https://maps.googleapis.com/maps/api/staticmap?center=41.992213,-93.543276&zoom=14&size=278x206&maptype=roadmap&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&scale=2&signature=nfBlCqKZaIDcNfQFf4_7kEQN4As=",NA,NA,photos/NA,TRUE
+93947368,//ecn.t0.tiles.virtualearth.net/tiles/r02133323011130.png?g=6243&mkt=en-us&shading=hill&lbl=l1&stl=fb,NA,map-tile,photos/NA,TRUE
+93947368,//ecn.t1.tiles.virtualearth.net/tiles/r02133323011131.png?g=6243&mkt=en-us&shading=hill&lbl=l1&stl=fb,NA,map-tile,photos/NA,TRUE
 93947368,https://photos.zillowstatic.com/p_c/ISqlxx5g78asua1000000000.jpg,X1-IA46dj4g78asua1000000000_n7s4r,hip-photo,photos/ISqlxx5g78asua1000000000.jpg,TRUE
 93947368,https://photos.zillowstatic.com/p_c/ISmqm9mjm356va1000000000.jpg,X1-IA0b2vkjm356va1000000000_nesz4,hip-photo,photos/ISmqm9mjm356va1000000000.jpg,TRUE
 93947368,https://photos.zillowstatic.com/p_c/ISadk1ch7wxzwm0000000000.jpg,X1-IAoxzmah7wxzwm0000000000_py3xt,hip-photo,photos/ISadk1ch7wxzwm0000000000.jpg,TRUE

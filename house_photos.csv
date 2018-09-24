@@ -78,7 +78,10 @@ id,link,photo_id,class,filename,saved
 93957524,https://photos.zillowstatic.com/p_c/ISi3m2p2qed1db0000000000.jpg,X1-IAwn1on2qed1db0000000000_ow6l2,hip-photo,photos/ISi3m2p2qed1db0000000000.jpg,TRUE
 93957524,https://photos.zillowstatic.com/p_c/ISecuz55yquq3h0000000000.jpg,X1-IAsw9l45yquq3h0000000000_js637,hip-photo,photos/ISecuz55yquq3h0000000000.jpg,TRUE
 120606137,https://photos.zillowstatic.com/p_h/ISi7duvgmtpj1v1000000000.jpg,X1-IAwrsfugmtpj1v1000000000_lytxn,hip-photo,photos/ISi7duvgmtpj1v1000000000.jpg,TRUE
-120606137,"https://maps.googleapis.com/maps/api/staticmap?center=42.028976,-93.728260&zoom=14&size=278x206&maptype=roadmap&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&scale=2&signature=15dK1tFeR_UVWgfAuNajH7q_wqo=",NA,NA,photos/NA,TRUE
+120606137,//ecn.t0.tiles.virtualearth.net/tiles/r02133323010110.png?g=6243&mkt=en-us&shading=hill&lbl=l1&stl=fb,NA,map-tile,photos/NA,TRUE
+120606137,//ecn.t3.tiles.virtualearth.net/tiles/r02133321232323.png?g=6243&mkt=en-us&shading=hill&lbl=l1&stl=fb,NA,map-tile,photos/NA,TRUE
+120606137,//ecn.t2.tiles.virtualearth.net/tiles/r02133321232332.png?g=6243&mkt=en-us&shading=hill&lbl=l1&stl=fb,NA,map-tile,photos/NA,TRUE
+120606137,//ecn.t1.tiles.virtualearth.net/tiles/r02133323010101.png?g=6243&mkt=en-us&shading=hill&lbl=l1&stl=fb,NA,map-tile,photos/NA,TRUE
 120606137,https://photos.zillowstatic.com/p_c/ISa1bidailhm1v1000000000.jpg,X1-IAolq3cailhm1v1000000000_m08i4,hip-photo,photos/ISa1bidailhm1v1000000000.jpg,TRUE
 120606137,https://photos.zillowstatic.com/p_c/IS2v86v3ed9p1v1000000000.jpg,X1-IAgfort3ed9p1v1000000000_m1n2l,hip-photo,photos/IS2v86v3ed9p1v1000000000.jpg,TRUE
 120606137,https://photos.zillowstatic.com/p_c/ISuo6ucx951s1v1000000000.jpg,X1-IA89mfbx951s1v1000000000_m31n2,hip-photo,photos/ISuo6ucx951s1v1000000000.jpg,TRUE

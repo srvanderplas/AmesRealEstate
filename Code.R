@@ -73,17 +73,22 @@ get_houseinfo <- function(h_url, photo_dir = "photos") {
   id <- str_extract(h_url, "\\d{1,}_zpid") %>% str_replace("_zpid", "")
   
   if (!str_detect("http", h_url)) {
-    h_url <- paste0("http://zillow.com", h_url, "/?fullpage=TRUE")
+    h_url <- paste0("http://zillow.com", h_url, "?fullpage=TRUE")
   }
+  # remDr$navigate(h_url)
+  # btn <- remDr$findElement(using = 'xpath', value = '//*[contains(text(),"Expand")]')
+  # remDr$mouseMoveToLocation(webElement = btn)
+  # remDr$click()
+  # src <- remDr$getPageSource() %>% magrittr::extract2(1) %>% read_html()
   
   src <- read_html(h_url)
   desc <- html_nodes(src, ".hdp-header-description .zsg-content-item") %>% html_text()
   
-  facts_glance <- html_nodes(src, ".zsg-media-bd .hdp-fact-ataglance-value") %>% 
+  facts_glance <- html_nodes(src, ".zsg-media-bd .fact-value") %>% 
     html_text(trim = T) %>% t() %>% as_data_frame() %>%
     set_names(html_nodes(src, ".zsg-media-bd .hdp-fact-ataglance-heading") %>% 
                 html_text(trim = T))
-  facts_full <- html_nodes(src, ".hdp-fact-container-columns .hdp-fact-list li") %>% html_text()
+  facts_full <- html_nodes(src, ".home-details-facts-container .fact-container") %>% html_text()
   
   facts_named <- facts_full[str_detect(facts_full, ":")]
   facts_unnamed <- facts_full[!str_detect(facts_full, ":")]
@@ -102,7 +107,7 @@ get_houseinfo <- function(h_url, photo_dir = "photos") {
     tidyr::spread(key = name, value = value) %>%
     mutate(id = id)
   
-  photos <- html_nodes(src, ".img-wrapper img") %>% html_attrs() %>%
+  photos <- html_nodes(src, ".photo-tile-image") %>% html_attrs() %>%
     map_df(.f = function(z) {
       names(z) <- str_replace(names(z), "href|src", "link")
       data_frame(id = id, link = z["link"], photo_id = z["id"], class = z["class"], filename = paste0(photo_dir, "/", str_extract(link, "[A-z0-9]*.[a-z]{3,4}$")))
@@ -130,9 +135,10 @@ pgsrc <- remDr$getPageSource() %>% magrittr::extract2(1) %>% read_html()
 articles <-  html_nodes(pgsrc, "article")
 
 
-# Close driver initially
+# Close driver
 remDr$close()
 rm(remDr)
+
 
 house_info <- articles %>% 
   html_attrs() %>%
@@ -164,7 +170,7 @@ house_allinfo <- full_join(houses, house_info)
 
 # Only download new photos
 new_photos <- filter(house_photos, !file.exists(filename))
-map2(new_photos$link, new_photos$filename, download.file)
+map2(new_photos$link, new_photos$filename, ~try(download.file(.x, .y)))
 rm(new_photos)
 
 house_photos$saved <- file.exists(house_photos$filename)

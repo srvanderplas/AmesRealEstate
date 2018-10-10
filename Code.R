@@ -1,7 +1,7 @@
 #!/usr/bin/Rscript
 
 library(here)
-setwd("~/Rprojects/Misc/AmesRealEstate/")
+setwd("~/Projects/Misc/AmesRealEstate/")
 
 # Pictures
 # Description

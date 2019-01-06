@@ -9,6 +9,7 @@ library(magrittr)
 library(here)
 setwd("~/Projects/Misc/AmesRealEstate/")
 
+source("basic-functions.R")
 # Pictures
 # Description
 # Extra information (if accurate)

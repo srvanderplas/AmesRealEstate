@@ -26,7 +26,7 @@ source("basic-functions.R")
 url <- "https://www.zillow.com/homes/for_sale/fsba,fsbo_lt/house_type/ef51a5aedfX1-CR1n2kaelgv03ge_12pfr1_crid/3-_beds/21780-_lot/0_singlestory/42.370212,-93.457261,41.735966,-94.3499_rect/9_zm/1_p/0_mmm/"
 # Client option
 # rd <- remoteDriver(port = 4445L)
-system('docker run -d -p 4445:4444 selenium/standalone-firefox')
+# system('docker run -d -p 4445:4444 selenium/standalone-firefox')
 remDr <- remoteDriver(remoteServerAddr = "localhost", port = 4445L, browserName = "firefox")
 remDr$open()
 # remDr <- rD[["client"]]
